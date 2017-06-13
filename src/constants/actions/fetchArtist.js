@@ -1,0 +1,5 @@
+export default {
+    ARTIST: 'ARTIST',
+    ARTIST_SUCCESS: 'ARTIST_SUCCESS',
+    ARTIST_ERROR: 'ARTIST_ERROR'
+}
