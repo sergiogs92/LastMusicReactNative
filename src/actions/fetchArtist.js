@@ -1,7 +1,8 @@
 import artistAction from '../constants/actions/fetchArtist'
 
 export default {
-    artist: () => ({type: artistAction.ARTIST}),
-    artistSuccess: (results) => ({type: artistAction.ARTIST_SUCCESS, results}),
-    artistError: (error) => ({type: artistAction.ARTIST_ERROR, error})
+    fetchArtist: () => ({type: artistAction.FETCH_ARTIST}),
+    fetchArtistSuccess: (results) => ({type: artistAction.FETCH_ARTIST_SUCCESS, results}),
+    fetchArtistError: (error) => ({type: artistAction.FETCH_ARTIST_ERROR, error}),
+    searchArtist: (artist) => ({type: artistAction.SEARCH_ARTIST, artist})
 }
