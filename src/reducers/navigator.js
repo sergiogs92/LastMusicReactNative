@@ -3,7 +3,7 @@ import AppNavigator from '../constants/router'
 import navigatorAction from '../constants/actions/navigator'
 
 export function initialState () {
-    return AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams('ArtistList'))
+    return AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams('Login'))
 }
 
 function navigate (state, {screen}) {
