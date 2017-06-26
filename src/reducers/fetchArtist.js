@@ -36,7 +36,6 @@ function fetchArtistError (state, {error}) {
     }
 }
 
-
 function searchArtist (state, {artist}) {
     let results = artistResult.filter(item => {
         if (item.hasOwnProperty('name') && item.name.includes(artist)) return item

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {StyleSheet, ActivityIndicator, ListView, TextInput, View, Dimensions} from 'react-native'
+import {StyleSheet, ActivityIndicator, ListView, TextInput, View, Dimensions, TouchableOpacity} from 'react-native'
 import ArtistItem from "./ArtistItem";
 
 class ArtistList extends Component {
@@ -9,6 +9,10 @@ class ArtistList extends Component {
 
     onInputChange (value) {
         this.props.searchArtist(value)
+    }
+
+    navigateToDetail(artist){
+        this.props.navigation.navigate('ArtistDetail', artist)
     }
 
     render () {
@@ -32,11 +36,19 @@ class ArtistList extends Component {
                         this.onInputChange(value)
                     }}
                 />
-            <ListView
-                dataSource={artistList}
-                enableEmptySections={true}
-                renderRow={(rowData) => <ArtistItem artist={rowData} />}
-            />
+                <ListView
+                    enableEmptySections={true}
+                    dataSource={artistList}
+                    renderRow={(artist) => {
+                        return (
+                            <TouchableOpacity
+                                onPress={() => this.navigateToDetail({artist})}>
+                                <ArtistItem artist={artist}/>
+                            </TouchableOpacity>
+                        )
+                    }}
+                />
+
             </View>
         )
     }
