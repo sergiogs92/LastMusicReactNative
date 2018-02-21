@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
     count: {
         color: 'gray'
     }
-});
+})

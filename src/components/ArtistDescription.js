@@ -27,7 +27,7 @@ export default class ArtistDescription extends Component {
                         pieces that combine singing and instruments.</Text>
                 </View>
             </View>
-        );
+        )
     }
 }
 
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
         color: '#295553',
         margin: 10
     }
-});
+})

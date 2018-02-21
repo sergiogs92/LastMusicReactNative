@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import {
     StyleSheet,
     View,
     StatusBar
-} from 'react-native';
+} from 'react-native'
 
-import ArtistDescription from "./ArtistDescription";
+import ArtistDescription from "./ArtistDescription"
 
 export default class ArtistDetail extends Component {
 
@@ -16,7 +16,7 @@ export default class ArtistDetail extends Component {
                 <StatusBar backgroundColor="#0a6ba1"/>
                 <ArtistDescription artist = {params.artist}/>
             </View>
-        );
+        )
     }
 }
 
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white'
     }
-});
+})
